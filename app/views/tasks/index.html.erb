@@ -1,0 +1,9 @@
+<h1>TO:DO list</h1>
+
+<table>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr><td><%= task.completed %></td><td><%= link_to(task.title, task_path(task.id)) %></td></tr>
+    <% end %>
+  </tbody>
+</table>
